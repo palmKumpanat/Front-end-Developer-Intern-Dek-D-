@@ -1,0 +1,66 @@
+.container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 90px;
+}
+
+.Slide{
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -18px;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    transition: 0.4s ease;
+    user-select: none;
+    background-color: rgba(165, 164, 164, 0.8);
+  }
+
+.next {
+    right: 0;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 0;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.next:hover .prev:hover{
+    background-color: #ef7123;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #f46b16;
+}
+
+.change {
+    animation-name: change;
+    animation-duration: 1s;
+}
+  
+@keyframes change {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
